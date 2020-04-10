@@ -1,8 +1,14 @@
-function findMissingNumbers(arr){
-let OriginalLength = arr[arr.length-1]-arr[0]+1;
-let actualLength = arr.length;
-let missingNumbers = OriginalLength-actualLength;
-console.log(missingNumbers);
+function findMissingNumbers(arr) {
+  let min = +Infinity
+  let max = -Infinity
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i]
+    }
+    if (arr[i] < min) {
+      min = arr[i]
+    }
+  }
+  return max - min - arr.length + 1
 }
-findMissingNumbers([6,7,9,10,11])
-
+console.log(findMissingNumbers([1, 5, 6, 10]))

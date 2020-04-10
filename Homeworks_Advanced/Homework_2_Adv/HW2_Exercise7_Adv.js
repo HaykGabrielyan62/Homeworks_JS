@@ -1,10 +1,13 @@
-function findEvens(arr) {
-let newArr = [];
-for(let i = 0; i<arr.length; i++){
-  if((arr[i])%2!=0 ){
-     newArr.push(arr[i]*arr.length)
-  } 
+function findOdds(arr) {
+  let newArr = []
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 != 0) {
+      newArr.push(arr[i])
+    }
+  }
+   for (let j = 0; j < newArr.length; j++) {
+      newArr[j]*=3;
+  }
+  return newArr;
 }
- console.log(newArr);
-}
-findEvens([2,1,9,7,4,3,])
+console.log(findOdds([5, 4, 78, 0, -3, 7]))
