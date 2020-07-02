@@ -96,12 +96,9 @@ class Student extends Person {
       } else {console.log('Program or grade you have inputed are wrong')}
     }
   toString(){
-    return ` First name -${this.firstName} \n Last name -${this.lastName}, \n Gender -${this.gender}, \n Age -${this.age}
-    \n Program -${this.program}, \n Year -${this.year}, \n Fee -${this.fee}
-    `
+    return `${super.toString()} \n Program -${this.program}, \n Year -${this.year}, \n Fee -${this.fee}`
   }
 }
-
 class Teacher extends Person {
   constructor(firstName, lastName, gender, age, program, pay){
     super(firstName, lastName, gender, age);
@@ -124,6 +121,8 @@ class Teacher extends Person {
   get pay(){
     return this._pay;
   }
-   
+   toString() {
+     return `${super.toString()} \n Program -${this.program}, \n Pay -${this.pay}`
+   }
 }
 
