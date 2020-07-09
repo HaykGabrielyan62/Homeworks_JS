@@ -7,7 +7,7 @@ class Author {
   set name(n){
       if (typeof(n)==='string' && n.length>1){
           this._name = n;
-      } else { console.log('Please type valid name') }
+      } else { console.log('Please type valid name and n') }
   }
   get name(){
       return this._name
